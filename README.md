@@ -14,11 +14,13 @@ When THEOS compiles nightshade it will compile every .xm file inside of the Comp
 There are a few partially written already for reference but the basic implementation boils down to as following;
 
 Import the required headers 
-```#import "../NightshadeColors.h"
+```
+#import "../NightshadeColors.h"
 #import "SparkAppList.h"
 ```
 Check if app is enabled  
-```%ctor {
+```
+%ctor {
 	NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
 
     if(GetPrefBool(@"kTweakEnabled")) {	
@@ -33,7 +35,8 @@ Check if app is enabled
 ```
 
 Run Hooks
-```%group Hooks
+```
+%group Hooks
 
 	%hook _UIBarBackground
 		- (void)setBackgroundColor:(id)arg1 {
