@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+        <key>title</key>
+		<string>Nightshade</string>	
+		<key>items</key>
+		<array>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.dylanduff.nightshadeprefs</string>
+				<key>key</key>
+				<string>kTweakEnabled</string>
+				<key>label</key>
+				<string>Enabled</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>isController</key>
+				<string>1</string>
+				<key>label</key>
+				<string>Nightshade Cloud</string>
+				<key>detail</key>
+				<string>NightshadeSocialController</string> 
+			</dict>
+    		<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>Options</string>
+			</dict>
+			
+				<dict>
+					<key>cell</key>
+					<string>PSLinkCell</string>
+					<key>isController</key>
+					<string>1</string>
+					<key>label</key>
+					<string>UI Theming</string>
+					<key>detail</key>
+					<string>NightshadeUIKitController</string> 
+				</dict>	
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+				<dict>
+					<key>action</key>
+					<string>killApplications</string>
+					<key>cell</key>
+					<string>PSButtonCell</string>
+					<key>label</key>
+					<string>Kill Apps</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>killSpringBoard</string>
+					<key>cell</key>
+					<string>PSButtonCell</string>
+					<key>cellAlignment</key>
+					<string>1</string>
+					<key>label</key>
+					<string>Respring</string>
+				</dict>	
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerAlignment</key>
+				<string>1</string>
+				<key>footerText</key>
+				<string>Thankyou to SynnyG for hepling with the Nightshade Helper App!</string>
+			</dict>						
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerAlignment</key>
+				<string>1</string>
+				<key>footerText</key>
+				<string>Nightshade © 2018 Dylan Duff ☮️</string>
+			</dict>
+		</array>
+	</dict>
+</plist>

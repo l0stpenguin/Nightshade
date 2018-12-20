@@ -1,0 +1,9 @@
+Package: com.dylanduff.nightshade.lite
+Name: NightshadeLite
+Depends: mobilesubstrate, preferenceloader, com.spark.libsparkapplist, com.creaturesurvive.libcscolorpicker
+Version: 1.0
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: DylanDuff
+Author: DylanDuff
+Section: Tweaks

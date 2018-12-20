@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>kTextColor</key>
+		<string>FFFFFF</string>
+		<key>kBackgroundColor</key>
+		<string>171717</string>
+		<key>kCellColor</key>
+		<string>1c1c1e</string>
+		<key>kNavColor</key>
+		<string>691B1B1B</string>
+		<key>kSeperatorColor</key>
+		<string>38383A</string>
+		<key>kAccentColor</key>
+		<string>38383A</string>
+	</dict>
+</plist>
