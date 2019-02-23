@@ -10,20 +10,35 @@
 			<dict>
 				<key>cell</key>
 				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>Tweak Creator</string>
 			</dict>
-			
+				<dict>
+					<key>action</key>
+					<string></string>
+					<key>cell</key>
+					<string>PSButtonCell</string>
+					<key>cellAlignment</key>
+					<string>1</string>
+					<key>label</key>
+					<string>DylanDuff</string>
+				</dict>	
 			<dict>
 				<key>cell</key>
 				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>Nightshade Helper App</string>
 			</dict>
-			<dict>
-				<key>cell</key>
-				<string>PSGroupCell</string>
-				<key>footerAlignment</key>
-				<string>1</string>
-				<key>footerText</key>
-				<string>Nightshade © 2018 Dylan Duff ☮️</string>
-			</dict>
+				<dict>
+					<key>action</key>
+					<string></string>
+					<key>cell</key>
+					<string>PSButtonCell</string>
+					<key>cellAlignment</key>
+					<string>1</string>
+					<key>label</key>
+					<string>SynnyGR</string>
+				</dict>	
 		</array>
 	</dict>
 </plist>
