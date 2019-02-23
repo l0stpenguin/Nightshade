@@ -2,7 +2,7 @@
 
 ------
 
-[NightshadeLite](https://repo.packix.com/package/com.dylanduff.nightshade/) is a system wide open source darkmode for iOS with both free and premium options available, the free stuff being open source here.
+[Nightshade](https://repo.packix.com/package/com.dylanduff.nightshade/) is a system wide open source darkmode for iOS with both free and premium options available, the free stuff being open source here.
 
 ### Adding to the Compatability Layer
 
