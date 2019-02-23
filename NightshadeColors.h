@@ -2,6 +2,7 @@
 
 #define PLIST_PATH @"/User/Library/Preferences/com.dylanduff.nightshadeprefs.plist"
 #define THEME_PATH @"/User/Library/Nightshade/Themes/"
+#define DEFAULTS_PATH @"/Library/PreferenceBundles/NightshadePrefs.bundle/defaults.plist"
 
 inline bool GetPrefBool(NSString *key){
 	return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] boolValue];
@@ -20,11 +21,13 @@ inline NSString *GetHexStringForPrefernceKey(NSString *key) {
 			NSString *FINAL_THEME_PATH = [THEME_PATH stringByAppendingString:[GetPrefVal(@"kTheme") stringByAppendingString:@".plist"]];
 			NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:FINAL_THEME_PATH] ? : [NSDictionary new];
 			return prefs[key];
-	
 		}	
-	}else{
+	}else if(GetPrefVal(@"kBackgroundColor")){
 		NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] ? : [NSDictionary new];
 		return prefs[key];	
+	}else{
+		NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:DEFAULTS_PATH] ? : [NSDictionary new];
+		return prefs[key];			
 	}
 } 
 

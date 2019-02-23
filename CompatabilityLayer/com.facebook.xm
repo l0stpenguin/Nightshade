@@ -89,6 +89,9 @@
 			if([arg1 isEqual:[UIColor whiteColor]]) {
 				arg1 = [UIColor backgroundColor];
 				return %orig(arg1); 
+			}else if([arg1 isEqual:[UIColor colorWithRed:0.800/255.0 green:0.816/255.0 blue:0.835/255.0 alpha:1]]){
+				arg1 = [UIColor backgroundColor];
+				return %orig(arg1); 
 			}else{
 				%orig;
 			}

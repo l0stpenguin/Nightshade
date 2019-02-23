@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+        <key>title</key>
+		<string>Nightshade</string>	
+		<key>items</key>
+		<array>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.dylanduff.nightshadeprefs</string>
+				<key>key</key>
+				<string>kSchedulingEnabled</string>
+				<key>label</key>
+				<string>Scheduling Enabled</string>
+			</dict>
+			<dict>
+				<key>action</key>
+				<string>pickDayWall</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>cellAlignment</key>
+				<string>1</string>
+				<key>label</key>
+				<string>Start Time</string>
+			</dict>	
+			<dict>
+				<key>action</key>
+				<string>pickDayWall</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>cellAlignment</key>
+				<string>1</string>
+				<key>label</key>
+				<string>End Time</string>
+			</dict>							
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>Wallpapers</string>
+			</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kScheduledWallsEnabled</string>
+					<key>label</key>
+					<string>Scheduled Wallpapers</string>
+				</dict>			
+				<dict>
+					<key>action</key>
+					<string>pickDayWall</string>
+					<key>cell</key>
+					<string>PSButtonCell</string>
+					<key>cellAlignment</key>
+					<string>1</string>
+					<key>label</key>
+					<string>Day Wallpaper</string>
+				</dict>	
+				<dict>
+					<key>action</key>
+					<string>pickNightWall</string>
+					<key>cell</key>
+					<string>PSButtonCell</string>
+					<key>cellAlignment</key>
+					<string>1</string>
+					<key>label</key>
+					<string>Night Wallpaper</string>
+				</dict>							
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>			
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerAlignment</key>
+				<string>1</string>
+				<key>footerText</key>
+				<string>Nightshade © 2018 Dylan Duff ☮️</string>
+			</dict>
+		</array>
+	</dict>
+</plist>

@@ -34,17 +34,50 @@
 				<key>label</key>
 				<string>Options</string>
 			</dict>
-			
 				<dict>
 					<key>cell</key>
 					<string>PSLinkCell</string>
 					<key>isController</key>
 					<string>1</string>
 					<key>label</key>
-					<string>UI Theming</string>
+					<string>Applications</string>
 					<key>detail</key>
 					<string>NightshadeUIKitController</string> 
 				</dict>	
+    			<dict>
+					<key>cell</key>
+					<string>PSLinkCell</string>
+					<key>isController</key>
+					<string>1</string>
+					<key>label</key>
+					<string>System</string>
+					<key>detail</key>
+					<string>NightshadeSpringboardController</string> 
+				</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSLinkCell</string>
+					<key>isController</key>
+					<string>1</string>
+					<key>label</key>
+					<string>Miscellaneous</string>
+					<key>detail</key>
+					<string>NightshadeAppController</string> 
+				</dict>
+    		<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSLinkCell</string>
+					<key>isController</key>
+					<string>1</string>
+					<key>label</key>
+					<string>Credits</string>
+					<key>detail</key>
+					<string>NightshadeCreditController</string> 
+				</dict>
 			<dict>
 				<key>cell</key>
 				<string>PSGroupCell</string>
@@ -70,15 +103,7 @@
 			<dict>
 				<key>cell</key>
 				<string>PSGroupCell</string>
-			</dict>
-			<dict>
-				<key>cell</key>
-				<string>PSGroupCell</string>
-				<key>footerAlignment</key>
-				<string>1</string>
-				<key>footerText</key>
-				<string>Thankyou to SynnyG for hepling with the Nightshade Helper App!</string>
-			</dict>						
+			</dict>					
 			<dict>
 				<key>cell</key>
 				<string>PSGroupCell</string>

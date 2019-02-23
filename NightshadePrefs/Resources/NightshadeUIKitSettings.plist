@@ -21,6 +21,20 @@
 			        <key>action</key>
 			        <string>selectApps</string>
 	    		</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSLinkListCell</string>
+					<key>detail</key>
+					<string>NightshadeThemeController</string>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kTheme</string>
+					<key>label</key>
+					<string>Theme</string>
+					<key>default</key>
+					<string>None</string>
+				</dict>	
 			<dict>
 				<key>cell</key>
 				<string>PSGroupCell</string>

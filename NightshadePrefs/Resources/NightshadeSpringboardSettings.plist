@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+        <key>title</key>
+		<string>Nightshade</string>
+		
+		<key>items</key>
+		<array>
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>Notification Options</string>
+			</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kNotificationTintEnabled</string>
+					<key>label</key>
+					<string>Tint Notifications</string>
+				</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSegmentCell</string>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kNotificationBlurStyle</string>
+					<key>validValues</key>
+					<array>
+						<string>light</string>
+						<string>dark</string>
+					</array>
+					<key>validTitles</key>
+					<array>
+						<string>Light Tint</string>
+						<string>Dark Tint</string>
+					</array>
+					<key>alignment</key>
+					<string>3</string>
+				</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSGroupCell</string>
+					<key>label</key>
+					<string>Widget Options</string>
+				</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kWidgetTintEnabled</string>
+					<key>label</key>
+					<string>Tint Widgets</string>
+				</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSegmentCell</string>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kWidgetBlurStyle</string>
+					<key>validValues</key>
+					<array>
+						<string>light</string>
+						<string>dark</string>
+					</array>
+					<key>validTitles</key>
+					<array>
+						<string>Light Tint</string>
+						<string>Dark Tint</string>
+					</array>
+					<key>alignment</key>
+					<string>3</string>
+				</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>Homescreen Options</string>
+			</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<true/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kDockBackgroundEnabled</string>
+					<key>label</key>
+					<string>Color Dock</string>
+				</dict>	
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<true/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kFolderBackgroundEnabled</string>
+					<key>label</key>
+					<string>Color Folder</string>
+				</dict>								
+	    	<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>UI Options</string>
+			</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kStatusbarEnabled</string>
+					<key>label</key>
+					<string>Color Statusbar</string>
+				</dict>
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kAlertsEnabled</string>
+					<key>label</key>
+					<string>Theme Alerts</string>
+				</dict>	
+				<dict>
+					<key>cell</key>
+					<string>PSSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>defaults</key>
+					<string>com.dylanduff.nightshadeprefs</string>
+					<key>key</key>
+					<string>kKeyboardEnabled</string>
+					<key>label</key>
+					<string>Dark Keyboard</string>
+				</dict>					
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerAlignment</key>
+				<string>1</string>
+				<key>footerText</key>
+				<string>Nightshade © 2018 Dylan Duff ☮️</string>
+			</dict>
+		</array>
+	</dict>
+</plist>

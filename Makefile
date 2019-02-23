@@ -1,5 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
+THEOS_DEVICE_IP = 192.168.1.3
+
 TWEAK_NAME = Nightshade
 Nightshade_FILES = $(wildcard *.xm) $(wildcard CompatabilityLayer/*.xm)
 Nightshade_FRAMEWORKS = UIKit Foundation

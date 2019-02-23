@@ -11,6 +11,9 @@
 @interface UIInterfaceActionGroupView : UIView
 @end
 
+@interface PSEditableTableCell : UIView
+@end
+
 @interface _UIAlertControllerInterfaceActionGroupView : UIInterfaceActionGroupView
 @end
 
@@ -88,10 +91,19 @@
 		}
 	%end
 
+	%hook UISwitch
+		-(void)layoutSubviews{
+			%orig;
+			[self setOnTintColor:[UIColor accentColor]];
+		}
+	%end
+
 	%hook UITableViewCell
 		-(void)layoutSubviews{
 			%orig;
-			[self setTintColor:[UIColor accentColor]];
+			//[self setTintColor:[UIColor accentColor]];
+			MSHookIvar<UIColor*>(self, "_selectionTintColor") = [UIColor cellColor];
+
 		}
 
 		- (void)setBackgroundColor:(id)arg1 {
@@ -239,20 +251,35 @@
 		}
 	%end
 
+	%hook PSEditableTableCell
+		-(UITextField *)_editableTextField {
+		        UITextField* field = %orig;
+		        field.textColor = [UIColor textColor];
+		        return field;
+		}
+		-(void)didMoveToWindow{
+		  %orig;
+		  MSHookIvar<UITextField*>(self, "_editableTextField").textColor = [UIColor textColor];
+		}
+	%end
+
+	//Alerts
 	%hook _UIAlertControllerInterfaceActionGroupView
 
 	- (void)layoutSubviews {
 	    %orig;
 	    
-	    UIView *filterView = self.subviews.firstObject.subviews.lastObject.subviews.lastObject;
-	    filterView.backgroundColor = [UIColor navColor];
-	    
-	    UIView *labelHolder = self.subviews.lastObject.subviews.firstObject.subviews.firstObject;
-	    for (UILabel *label in labelHolder.subviews) {
-	        if ([label respondsToSelector:@selector(setTextColor:)]) {
-	            label.textColor = UIColor.whiteColor;
-	        }
-	    }
+	    if(GetPrefBool(@"kAlertsEnabled")) {
+		    UIView *filterView = self.subviews.firstObject.subviews.lastObject.subviews.lastObject;
+		    filterView.backgroundColor = [UIColor navColor];
+		    
+		    UIView *labelHolder = self.subviews.lastObject.subviews.firstObject.subviews.firstObject;
+		    for (UILabel *label in labelHolder.subviews) {
+		        if ([label respondsToSelector:@selector(setTextColor:)]) {
+		            label.textColor = UIColor.whiteColor;
+		        }
+		    }
+		}
 	}
 
 	%end
@@ -262,28 +289,48 @@
 	- (void)layoutSubviews {
 	    %orig;
 	    
-	    UIView *knockoutView = self.subviews[1];
-	    UIView *filterView = knockoutView.subviews.lastObject.subviews.lastObject;
-	    UIView *whiteView = self.subviews.firstObject;
-	    
-	    filterView.backgroundColor = [UIColor navColor];
-	    whiteView.backgroundColor = [UIColor navColor];
+	    if(GetPrefBool(@"kAlertsEnabled")) {
+		    UIView *knockoutView = self.subviews[1];
+		    UIView *filterView = knockoutView.subviews.lastObject.subviews.lastObject;
+		    UIView *whiteView = self.subviews.firstObject;
+		    
+		    filterView.backgroundColor = [UIColor navColor];
+		    whiteView.backgroundColor = [UIColor navColor];
+		}
 	}
 
 	%end	
 
-	/*
-	%hook UIView
-		- (void)setBackgroundColor:(id)arg1 {
-			if([arg1 isEqual:[UIColor whiteColor]]) {
-			    arg1 = [UIColor backgroundColor];
-				return %orig(arg1); 
-			}else{
-				%orig;
-			}
+	// ************************************************
+	// ****************** Keyboard ********************
+	// ************************************************
+
+
+	// Dark keyboard
+	%hook UIKBRenderConfig
+
+	- (BOOL)lightKeyboard {
+		BOOL light = %orig;
+		if(GetPrefBool(@"kTweakEnabled") && GetPrefBool(@"kKeyboardEnabled")) {	
+			light = NO;
 		}
+		return light;
+	}
+
 	%end
-	*/
+
+	// Dark PIN keypad
+	%hook DevicePINKeypad
+
+	- (id)initWithFrame:(CGRect)frame {
+		id keypad = %orig();
+		if(GetPrefBool(@"kTweakEnabled") && GetPrefBool(@"kKeyboardEnabled")) {	
+			[keypad setBackgroundColor:[UIColor colorWithWhite:40.0/255 alpha:0.7]];
+		}
+		return keypad;
+	}
+
+	%end
 
 %end
 
@@ -297,6 +344,7 @@
 		@"com.christianselig.Apollo",   
 		@"com.apple.mobilenotes",   
 	    @"com.facebook.Facebook", 
+	    @"com.saurik.cydia", 
 	    @"com.apple.mobilesafari"           
 	];
 	
